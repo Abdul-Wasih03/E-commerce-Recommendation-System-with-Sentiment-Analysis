@@ -1,0 +1,11 @@
+.sales-forecast {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .sales-forecast h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  

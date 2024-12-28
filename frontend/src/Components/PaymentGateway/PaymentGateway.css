@@ -1,0 +1,93 @@
+.payment-gateway-wrapper {
+    padding: 40px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 100%; /* Make the wrapper take full page width */
+    max-width: 100%; /* Remove width restriction */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-form-group {
+    display: flex;
+    justify-content: space-between; /* Distribute the sections horizontally */
+    gap: 20px; /* Add space between the sections */
+    width: 100%; /* Full width for the group */
+    box-sizing: border-box;
+}
+
+.payment-options,
+.payment-details {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.payment-options {
+    flex: 0 0 35%; /* Take 30% of the space */
+    margin-right: 20px;
+}
+
+.payment-details {
+    flex: 1; /* Take the remaining space */
+}
+
+.payment-options h1,
+.payment-details h2 {
+    text-align: center;
+}
+
+.payment-method input {
+    margin-right: 10px;
+}
+.cod-display{
+    align-items: center;
+    margin: 60px;
+    font-size: 25px;
+}
+
+.upi-details select,
+.upi-details input,
+.card-details input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.expiry-cvv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expiry-cvv input {
+    width: calc(50% - 10px);
+}
+
+/* Ensure the button stays below the form group */
+.place-order-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.place-order-button {
+    padding: 12px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.place-order-button:hover {
+    background-color: #e64a19;
+}

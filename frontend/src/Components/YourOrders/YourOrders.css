@@ -1,0 +1,121 @@
+.your-orders {
+    margin: 100px 170px;
+}
+
+.orders-list hr {
+    height: 2px;
+    background: #e2e2e2;
+    border: 0;
+}
+
+.order-format-header, .order-format {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr; /* Added an extra column for 'Review' */
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    color: #454545;
+}
+
+.order-format-header {
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid #e2e2e2;
+    padding-bottom: 10px;
+}
+
+.order-format {
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.order-product-image {
+    height: 64px;
+    width: auto;
+}
+
+.order-quantity {
+    width: 50px;
+    height: 30px;
+    border: 2px solid #ebebeb;
+    background: #fff;
+    text-align: center;
+    line-height: 30px;
+}
+
+.rate-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    text-align: center;
+}
+
+.rate-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+/* Responsive Styles for 1280px */
+@media (max-width: 1280px) {
+    .your-orders {
+        margin: 60px 50px;
+    }
+    .order-format-header, .order-format {
+        grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr; /* Adjusted to remove image column space */
+        gap: 15px;
+        font-size: 15px;
+    }
+    .order-product-image {
+        height: 50px;
+    }
+    .rate-button {
+        padding: 8px 12px;
+    }
+}
+
+/* Responsive Styles for 800px */
+@media (max-width: 800px) {
+    .your-orders {
+        margin: 30px 20px;
+    }
+    .order-format-header, .order-format {
+        grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr; /* Reduced columns for medium screens */
+        gap: 12px;
+        font-size: 14px;
+    }
+    .order-product-image {
+        height: 45px;
+    }
+    .rate-button {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+}
+
+/* Responsive Styles for 500px */
+@media (max-width: 500px) {
+    .your-orders {
+        margin: 20px;
+    }
+    .order-format-header {
+        display: none;
+    }
+    .order-format {
+        grid-template-columns: 1fr 1fr 1fr; /* Simplified for small screens */
+        gap: 10px;
+        font-size: 13px;
+        padding: 10px 0;
+    }
+    .order-product-image {
+        height: 40px;
+    }
+    .rate-button {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+}
