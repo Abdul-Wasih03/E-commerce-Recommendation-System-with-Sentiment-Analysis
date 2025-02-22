@@ -1,3 +1,4 @@
+const port = 4000;
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -13,8 +14,6 @@ require('dotenv').config();
 
 app.use(express.json());
 app.use(cors());
-
-
 
 // Database Connection with MongoDB
 const mongoUri = process.env.MONGO_URI;
@@ -151,8 +150,6 @@ app.get('/allproducts',async (req,res)=>{
     console.log("All Products Fetched")
     res.send(products);
 })
-
-
 
 // Schema Creating for User Model
 
@@ -533,6 +530,61 @@ app.post('/recommendations', async (req, res) => {
 });
 
 
+
+// // 🔹 API 1: Get Product Recommendations from ML Model (Python API)
+// app.post('/api/recommend', async (req, res) => {
+//     try {
+//         const { user_id } = req.body;
+
+//         const response = await axios.post('http://localhost:8000/recommend', { user_id });
+
+//         res.json(response.data);
+//     } catch (error) {
+//         console.error('Error fetching recommendations:', error.message);
+//         res.status(500).json({ error: 'Internal server error' });
+//     }
+// });
+
+// // 🔹 API 2: Get Sentiment-based Product Recommendations
+// app.get('/api/recommendations', async (req, res) => {
+//     try {
+//         const { user_id } = req.query;
+
+//         if (!user_id) {
+//             return res.status(400).json({ error: 'user_id is required' });
+//         }
+
+//         const response = await axios.get(`http://localhost:5000/recommendations?user_id=${user_id}`);
+
+//         res.json(response.data);
+//     } catch (error) {
+//         console.error('Error fetching sentiment-based recommendations:', error.message);
+//         res.status(500).json({ error: 'Internal server error' });
+//     }
+// });
+
+// // 🔹 API 3: Get Sales Forecast (ARIMA Model)
+// app.get('/api/sales-forecast', async (req, res) => {
+//     try {
+//         const response = await axios.get('http://localhost:5000/sales-forecast');
+
+//         res.json(response.data);
+//     } catch (error) {
+//         console.error('Error fetching sales forecast:', error.message);
+//         res.status(500).json({ error: 'Internal server error' });
+//     }
+// });
+
+
+// app.listen(port,(error)=>{
+//     if(!error){
+//         console.log("Server Running on Port "+port)
+//     }
+//     else{
+//         console.log("Error: "+error)
+//     }
+
+// })
+
 // Export the Express app as a serverless function
 module.exports = app;
-})
