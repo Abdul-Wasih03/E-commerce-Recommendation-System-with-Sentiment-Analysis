@@ -532,7 +532,5 @@ app.post('/recommendations', async (req, res) => {
     }
 });
 
-
 // Export the Express app as a serverless function
 module.exports = app;
-})
