@@ -9,12 +9,8 @@ const axios = require('axios');
 const { log } = require("console");
 require('dotenv').config();
 
-
-
 app.use(express.json());
 app.use(cors());
-
-
 
 // Database Connection with MongoDB
 const mongoUri = process.env.MONGO_URI;
