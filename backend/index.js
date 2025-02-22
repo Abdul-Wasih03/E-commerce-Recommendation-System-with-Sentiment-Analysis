@@ -10,8 +10,6 @@ const axios = require('axios');
 const { log } = require("console");
 require('dotenv').config();
 
-
-
 app.use(express.json());
 app.use(cors());
 
@@ -528,7 +526,6 @@ app.post('/recommendations', async (req, res) => {
         res.status(500).json({ message: 'Error saving recommendation' });
     }
 });
-
 
 
 // // 🔹 API 1: Get Product Recommendations from ML Model (Python API)
