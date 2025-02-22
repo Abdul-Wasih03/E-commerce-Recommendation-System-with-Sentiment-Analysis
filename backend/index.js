@@ -15,6 +15,8 @@ require('dotenv').config();
 app.use(express.json());
 app.use(cors());
 
+
+
 // Database Connection with MongoDB
 const mongoUri = process.env.MONGO_URI;
 mongoose.connect(mongoUri)
@@ -532,12 +534,6 @@ app.post('/recommendations', async (req, res) => {
 });
 
 
-
-app.listen(port,(error)=>{
-    if(!error){
-        console.log("Server Running on Port "+port)
-    }
-    else{
-        console.log("Error: "+error)
-    }
+// Export the Express app as a serverless function
+module.exports = app;
 })
